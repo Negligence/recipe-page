@@ -1,0 +1,178 @@
+/* #region Defaults */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  background-color: var(--main-bg-color);
+  --sedan-bg-color: hsl(31, 77%, 52%);
+  --suv-bg-color: hsl(184, 100%, 22%);
+  --luxury-bg-color: hsl(179, 100%, 13%);
+  --main-bg-color: hsl(0, 0%, 95%);
+  --main-color: hsla(0, 0%, 100%, 0.75);
+  --ff-head: Big Shoulders Display, cursive;
+  --ff-sub: Lexend Deca, sans-serif;
+  --fw-bold: 700;
+  --fw-reg: 400;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+:not(ul, ol, li) {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  gap: clamp(1rem, 1.5vw + 0.65rem, 2rem);
+}
+body main {
+  display: contents;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-head);
+  font-weight: var(--fw-bold);
+  font-size: 2.5rem;
+  color: var(--main-bg-color);
+}
+
+p, a {
+  font-family: var(--ff-sub);
+  font-weight: var(--fw-reg);
+  font-size: 0.9375rem;
+  color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+  background-color: var(--main-bg-color);
+}
+
+footer {
+  font-family: var(--ff-sub);
+  font-size: 0.6875rem;
+  position: static;
+  inset: auto 0 1rem;
+  text-align: center;
+  z-index: -1;
+}
+footer > a {
+  font-size: 0.6875rem;
+  color: var(--luxury-bg-color);
+}
+
+/* #endregion Defaults */
+/* #region Mobile Styling */
+section,
+section > article {
+  display: grid;
+}
+
+section {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+section > h1 {
+  opacity: 0;
+  position: fixed;
+  z-index: -1;
+}
+section > article {
+  width: 20.4375rem;
+  height: 27.625rem;
+  padding: 3rem;
+  gap: 2rem;
+  place-items: start;
+}
+section > article > p {
+  line-height: 1.6666666667em;
+}
+section > article > a {
+  padding: 0.9375rem 1.875rem;
+  border-radius: 100vmax;
+}
+section > article:nth-of-type(1) {
+  background-color: var(--sedan-bg-color);
+}
+section > article:nth-of-type(1) > a {
+  color: var(--sedan-bg-color);
+}
+section > article:nth-of-type(1) > a:hover,
+section > article:nth-of-type(1) > a:focus,
+section > article:nth-of-type(1) > a:active {
+  background-color: var(--sedan-bg-color);
+}
+section > article:nth-of-type(2) {
+  background-color: var(--suv-bg-color);
+}
+section > article:nth-of-type(2) > a {
+  color: var(--suv-bg-color);
+}
+section > article:nth-of-type(2) > a:hover,
+section > article:nth-of-type(2) > a:focus,
+section > article:nth-of-type(2) > a:active {
+  background-color: var(--suv-bg-color);
+}
+section > article:nth-of-type(3) {
+  background-color: var(--luxury-bg-color);
+}
+section > article:nth-of-type(3) > a {
+  color: var(--luxury-bg-color);
+}
+section > article:nth-of-type(3) > a:hover,
+section > article:nth-of-type(3) > a:focus,
+section > article:nth-of-type(3) > a:active {
+  background-color: var(--luxury-bg-color);
+}
+
+/* #endregion Mobile Styling */
+/* #region Desktop Styling */
+@media only screen and (min-width: 57.5em) {
+  body {
+    height: inherit;
+  }
+  section {
+    grid-auto-flow: column;
+  }
+  section > article {
+    width: 19.1875rem;
+    height: 31.3125rem;
+    grid-template-rows: repeat(3, auto) 1fr;
+  }
+  section > article > a {
+    align-self: end;
+  }
+  footer {
+    position: fixed;
+    z-index: 1;
+  }
+}
+/* #endregion Desktop Styling */
+/* #region Active states */
+section > article > a {
+  transition: 350ms;
+}
+section > article > a:hover,
+section > article > a:focus,
+section > article > a:active {
+  outline: 0.125rem solid var(--main-bg-color);
+  color: var(--main-bg-color);
+}
+
+footer > a {
+  text-decoration: underline;
+  transition: color 250ms ease-in-out;
+}
+footer > a:hover, footer > a:focus, footer > a:active {
+  color: var(--sedan-bg-color);
+}
+footer > a:focus, footer > a:active {
+  border-radius: 0.125rem;
+  outline: currentColor solid 0.125rem;
+}
+
+/* #endregion Active states */
