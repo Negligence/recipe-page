@@ -3,22 +3,6 @@
 @use "sass:meta";
 @use "sass:list";
 
-// #region Colors
-// Setting the colors here generates css custom properties in styles.scss
-$sedan-bg-color: hsl(31, 77%, 52%);
-$suv-bg-color: hsl(184, 100%, 22%);
-$luxury-bg-color: hsl(179, 100%, 13%);
-$main-bg-color: hsl(0, 0%, 95%);
-$main-color: hsla(0, 0%, 100%, 0.75);
-// #endregion Colors
-
-// #region Typography
-$primary: 'Big Shoulders Display', cursive;
-$secondary: 'Lexend Deca', sans-serif;
-$bold:700;
-$regular:400;
-// #endregion Typography
-
 // #region Fluid Type Scale Functions
 
 // These are the Base Stopping points for the min and max breakpoint
