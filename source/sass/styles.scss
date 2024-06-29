@@ -12,6 +12,7 @@ html {
 
   --nutmeg: hsl(14, 45%, 36%);
   --dark-raspberry: hsl(332, 51%, 32%);
+  --dark-raspberry-bg: hsl(322, 100%, 98%);
   --white: hsl(0, 0%, 100%);
   --rose-white: hsl(330, 100%, 98%);
   --eggshell: hsl(30, 54%, 90%);
@@ -36,52 +37,72 @@ body {
   display: inherit;
   height: inherit;
   font-family: var(--ff-body);
+  // line-height: 1em;
   
-  display: grid;
-  place-items: center;
-  gap: clamped(16px, 32px);
+  // display: grid;
+  // place-items: center;
+  // gap: clamped(16px, 32px);
   
-  main {
-    display: contents;
-  }
+  // main {
+  //   display: contents;
+  // }
 }
-h1 {color: var(--dark-charcoal);}
-h2,h3,h4,h5,h6 {
-  font: {
-    family: var(--ff-head);
-    weight: var(--fw-bold);
-    size: rem(40px);
-  }
+
+h1 {
+  font-size: rem(36px);
+  color: var(--dark-charcoal);
+}
+
+h2 {
+  font-size: rem(28px);
   color: var(--nutmeg);
 }
 
-p,ul,ol,strong,b a {
+p,ul,ol,strong,b, a {
   font: {
     family: var(--ff-body);
-    weight: var(--fw-reg);
-    size: rem(15px);
+    size: rem(16px);
   }
   color: var(--wenge-brown);
 }
 
-a {
-  text-decoration: none;
-  background-color: var(--main-bg-color);
+a {text-decoration: none;}
+
+ol, ul {list-style-position: outside;}
+
+#hero li::marker {
+  color: var(--dark-raspberry);
 }
+
+#ingredients li::marker,
+#instructions li::marker {
+  color: var(--nutmeg);
+}
+
+#hero li::marker,
+#ingredients li::marker {
+  font-size: rem(10px);
+}
+
+#instructions li::marker {
+  font-weight: var(--fw-bold);
+}
+
+#hero strong {color: var(--dark-raspberry);}
+#hero div {background-color: var(--dark-raspberry-bg);}
+
+#nutrition b {color: var(--nutmeg);}
 
 footer { 
   font: {
-    family:var(--ff-sub);
+    family:var(--ff-body);
     size: rem(11px);
   }
-  position: static;
-  inset: auto 0 1rem;
   text-align: center; 
-  z-index: -1;
   
   > a {
     font-size: rem(11px);
-    color: var(--luxury-bg-color);
+    color: var(--dark-raspberry);
   }
 }
 /* #endregion Defaults */
@@ -98,6 +119,5 @@ footer {
 /* #endregion Desktop Styling */
 
 /* #region Active states */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+
 /* #endregion Active states */
