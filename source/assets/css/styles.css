@@ -40,6 +40,7 @@ body {
 
 h1 {
   font-size: 2.25rem;
+  font-weight: 400;
   color: var(--dark-charcoal);
 }
 
@@ -84,10 +85,6 @@ ol, ul {
   color: var(--dark-raspberry);
 }
 
-#hero div {
-  background-color: var(--dark-raspberry-bg);
-}
-
 #nutrition b {
   color: var(--nutmeg);
 }
@@ -104,6 +101,23 @@ footer > a {
 
 /* #endregion Defaults */
 /* #region Mobile Styling */
+#hero {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+#hero img {
+  width: 100%;
+}
+#hero h1 {
+  font-weight: normal;
+}
+#hero div {
+  background-color: var(--dark-raspberry-bg);
+  width: 19.375rem;
+  height: 11.875rem;
+}
+
 /* #endregion Mobile Styling */
 /* #region Desktop Styling */
 /* #endregion Desktop Styling */

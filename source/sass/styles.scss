@@ -50,6 +50,7 @@ body {
 
 h1 {
   font-size: rem(36px);
+  font-weight: 400;
   color: var(--dark-charcoal);
 }
 
@@ -89,7 +90,6 @@ ol, ul {list-style-position: outside;}
 }
 
 #hero strong {color: var(--dark-raspberry);}
-#hero div {background-color: var(--dark-raspberry-bg);}
 
 #nutrition b {color: var(--nutmeg);}
 
@@ -108,7 +108,25 @@ footer {
 /* #endregion Defaults */
 
 /* #region Mobile Styling */
+#hero {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  
+  img {
+    width: 100%;
+  }
+  
+  h1 {
+    font-weight: normal;
+  }
 
+  div {
+    background-color: var(--dark-raspberry-bg);
+    width: rem(310px);
+    height: rem(190px);
+  }
+}
 
 /* #endregion Mobile Styling */
 
