@@ -114,14 +114,19 @@ footer {
   gap: 1rem;
   
   img {
-    width: 100%;
+    width: min(rem(656px), 100%);
   }
   
   h1 {
     font-weight: normal;
+    line-height: 1em;
+  }
+  
+  .data {
+    padding: 0 2rem 2rem;
   }
 
-  div {
+  .prepare {
     background-color: var(--dark-raspberry-bg);
     width: rem(310px);
     height: rem(190px);
@@ -131,6 +136,12 @@ footer {
 /* #endregion Mobile Styling */
 
 /* #region Desktop Styling */
+@media only screen and (min-width: em(768px)) {
+  img {
+    border-radius: rem(10px);
+  }
+}
+
 @media only screen and (min-width: em(920px)) {
 
 }

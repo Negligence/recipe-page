@@ -107,12 +107,16 @@ footer > a {
   gap: 1rem;
 }
 #hero img {
-  width: 100%;
+  width: min(41rem, 100%);
 }
 #hero h1 {
   font-weight: normal;
+  line-height: 1em;
 }
-#hero div {
+#hero .data {
+  padding: 0 2rem 2rem;
+}
+#hero .prepare {
   background-color: var(--dark-raspberry-bg);
   width: 19.375rem;
   height: 11.875rem;
@@ -120,6 +124,11 @@ footer > a {
 
 /* #endregion Mobile Styling */
 /* #region Desktop Styling */
+@media only screen and (min-width: 48em) {
+  img {
+    border-radius: 0.625rem;
+  }
+}
 /* #endregion Desktop Styling */
 /* #region Active states */
 /* #endregion Active states */
