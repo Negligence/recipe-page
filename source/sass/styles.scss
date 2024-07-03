@@ -111,26 +111,40 @@ footer {
 #hero {
   display: grid;
   place-items: center;
-  gap: 1rem;
+  row-gap: 1.75rem;
+  grid: 
+  "   img  img  img   "
+  "    .    h1   .    "
+  "    .    p    .    "
+  "    .   div   .    "
+  "    .    .    .    "
+  / 1.5rem auto 1.5rem;
   
   img {
+    grid-area: img;
     width: min(rem(656px), 100%);
   }
   
   h1 {
+    grid-area: h1;
     font-weight: normal;
     line-height: 1em;
   }
-  
-  .data {
-    padding: 0 2rem 2rem;
+
+  p {
+    grid-area: p;
+    line-height: 1.5em;
   }
 
-  .prepare {
+  div {
+    grid-area: div;
     background-color: var(--dark-raspberry-bg);
     width: rem(310px);
     height: rem(190px);
+    display: grid;
+    place-content: center;
   }
+
 }
 
 /* #endregion Mobile Styling */
