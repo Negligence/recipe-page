@@ -71,16 +71,12 @@ a {text-decoration: none;}
 
 ol, ul {list-style-position: outside;}
 
-#hero li::marker {
-  color: var(--dark-raspberry);
-}
-
 #ingredients li::marker,
 #instructions li::marker {
   color: var(--nutmeg);
 }
 
-#hero li::marker,
+
 #ingredients li::marker {
   font-size: rem(10px);
 }
@@ -88,8 +84,6 @@ ol, ul {list-style-position: outside;}
 #instructions li::marker {
   font-weight: var(--fw-bold);
 }
-
-#hero strong {color: var(--dark-raspberry);}
 
 #nutrition b {color: var(--nutmeg);}
 
@@ -141,8 +135,32 @@ footer {
     background-color: var(--dark-raspberry-bg);
     width: rem(310px);
     height: rem(190px);
+    padding: rem(25px);
     display: grid;
     place-content: center;
+
+    strong {
+      font-size: rem(20px);
+      color: var(--dark-raspberry);
+    }
+
+    ul {
+      // padding-inline-start: 60px;
+    }
+
+    li {
+      line-height: 1.5rem;
+      // margin-inline-start: 30px;
+    }
+
+    li::marker {
+      color: var(--dark-raspberry);
+      font-size: rem(12px);
+    }
+
+    b {
+      font-weight: var(--fw-semi-bold);
+    }
   }
 
 }
