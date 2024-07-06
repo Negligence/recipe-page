@@ -102,6 +102,8 @@ footer {
 /* #endregion Defaults */
 
 /* #region Mobile Styling */
+
+/* #region Hero */
 #hero {
   display: grid;
   place-items: center;
@@ -135,7 +137,9 @@ footer {
     background-color: var(--dark-raspberry-bg);
     width: rem(310px);
     height: rem(190px);
-    padding: rem(25px);
+    border-radius: rem(10px);
+    padding-inline: rem(24px);
+    padding-block-start: rem(20px);
     display: grid;
     place-content: center;
 
@@ -145,12 +149,12 @@ footer {
     }
 
     ul {
-      // padding-inline-start: 60px;
+      padding-inline-start: rem(24px);
     }
 
     li {
-      line-height: 1.5rem;
-      // margin-inline-start: 30px;
+      line-height: 1.75rem;
+      padding-inline-start: rem(28px);
     }
 
     li::marker {
@@ -159,11 +163,11 @@ footer {
     }
 
     b {
-      font-weight: var(--fw-semi-bold);
+      font-weight: var(--fw-bold);
     }
   }
-
 }
+/* #enregion Hero */
 
 /* #endregion Mobile Styling */
 

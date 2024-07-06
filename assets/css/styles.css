@@ -92,6 +92,7 @@ footer > a {
 
 /* #endregion Defaults */
 /* #region Mobile Styling */
+/* #region Hero */
 #hero {
   display: grid;
   place-items: center;
@@ -116,7 +117,9 @@ footer > a {
   background-color: var(--dark-raspberry-bg);
   width: 19.375rem;
   height: 11.875rem;
-  padding: 1.5625rem;
+  border-radius: 0.625rem;
+  padding-inline: 1.5rem;
+  padding-block-start: 1.25rem;
   display: grid;
   place-content: center;
 }
@@ -124,17 +127,22 @@ footer > a {
   font-size: 1.25rem;
   color: var(--dark-raspberry);
 }
+#hero div ul {
+  padding-inline-start: 1.5rem;
+}
 #hero div li {
-  line-height: 1.5rem;
+  line-height: 1.75rem;
+  padding-inline-start: 1.75rem;
 }
 #hero div li::marker {
   color: var(--dark-raspberry);
   font-size: 0.75rem;
 }
 #hero div b {
-  font-weight: var(--fw-semi-bold);
+  font-weight: var(--fw-bold);
 }
 
+/* #enregion Hero */
 /* #endregion Mobile Styling */
 /* #region Desktop Styling */
 @media only screen and (min-width: 48em) {
