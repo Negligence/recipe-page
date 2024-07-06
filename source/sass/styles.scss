@@ -31,7 +31,10 @@ html {
 
 :not(ul, ol, li) {margin: 0;}
 
-h1,h2,h3,h4,h5,h6 {font-family: var(--ff-head);}
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--ff-head);
+  font-weight: 400;
+}
 
 body {
   display: inherit;
@@ -50,7 +53,6 @@ body {
 
 h1 {
   font-size: rem(36px);
-  font-weight: 400;
   color: var(--dark-charcoal);
 }
 
@@ -71,14 +73,8 @@ a {text-decoration: none;}
 
 ol, ul {list-style-position: outside;}
 
-#ingredients li::marker,
 #instructions li::marker {
   color: var(--nutmeg);
-}
-
-
-#ingredients li::marker {
-  font-size: rem(10px);
 }
 
 #instructions li::marker {
@@ -123,7 +119,6 @@ footer {
   
   h1 {
     grid-area: h1;
-    font-weight: normal;
     line-height: 1em;
   }
 
@@ -153,7 +148,7 @@ footer {
     }
 
     li {
-      line-height: 1.75rem;
+      line-height: 1.75em;
       padding-inline-start: rem(28px);
     }
 
@@ -168,6 +163,32 @@ footer {
   }
 }
 /* #enregion Hero */
+
+/* #region Ingredients */
+#ingredients {
+  padding: 1.5rem 1.5rem 1.25rem;
+
+  ul {
+    padding-inline-start: rem(24px);
+  }
+
+  li {
+    padding-inline-start: 1rem;
+    margin-block-end: 0.75rem;
+  }
+  
+  li::marker {
+    font-size: rem(12px);
+    color: var(--nutmeg);
+  }
+}
+
+hr {
+  border-color: hsla(0, 0%, 0%, 0.10);
+  border-width: 1px 0 0;
+  margin: 0 1.5rem;
+}
+/* #endregion Ingredients */
 
 /* #endregion Mobile Styling */
 
