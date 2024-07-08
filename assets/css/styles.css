@@ -139,27 +139,36 @@ footer > a {
 /* #enregion Hero */
 /* #region Ingredients */
 #ingredients {
-  padding: 1.5rem 1.5rem 1.25rem;
+  padding-inline: 1.5rem;
 }
 #ingredients ul {
   padding-inline-start: 1.5rem;
 }
-#ingredients li {
+#ingredients ul li {
   padding-inline-start: 1rem;
+  line-height: 1.4em;
+}
+#ingredients ul :not(:last-child) {
   margin-block-end: 0.75rem;
 }
-#ingredients li::marker {
+#ingredients ul li::marker {
   font-size: 0.75rem;
   color: var(--nutmeg);
 }
 
 hr {
-  border-color: hsla(0, 0%, 0%, 0.1);
+  border-color: hsla(0, 0%, 0%, 0.15);
   border-width: 1px 0 0;
-  margin: 0 1.5rem;
+  margin: 2rem 1.5rem;
 }
 
 /* #endregion Ingredients */
+/* #region Instructions */
+#instructions {
+  padding-inline: 1.5rem;
+}
+
+/* #endregion Instructions */
 /* #endregion Mobile Styling */
 /* #region Desktop Styling */
 @media only screen and (min-width: 48em) {

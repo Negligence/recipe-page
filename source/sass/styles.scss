@@ -166,29 +166,42 @@ footer {
 
 /* #region Ingredients */
 #ingredients {
-  padding: 1.5rem 1.5rem 1.25rem;
+  padding-inline: 1.5rem;
 
   ul {
     padding-inline-start: rem(24px);
-  }
 
-  li {
-    padding-inline-start: 1rem;
-    margin-block-end: 0.75rem;
-  }
-  
-  li::marker {
-    font-size: rem(12px);
-    color: var(--nutmeg);
+    li {
+      padding-inline-start: 1rem;
+      line-height: 1.4em;
+    }
+    
+    :not(:last-child) {
+      margin-block-end: 0.75rem;
+    }
+
+    li::marker {
+      font-size: rem(12px);
+      color: var(--nutmeg);
+    }
+
   }
 }
 
 hr {
-  border-color: hsla(0, 0%, 0%, 0.10);
+  border-color: hsla(0, 0%, 0%, 0.15);
   border-width: 1px 0 0;
-  margin: 0 1.5rem;
+  margin: 2rem 1.5rem;
 }
 /* #endregion Ingredients */
+
+/* #region Instructions */
+#instructions {
+  padding-inline: 1.5rem;
+
+}
+
+/* #endregion Instructions */
 
 /* #endregion Mobile Styling */
 
