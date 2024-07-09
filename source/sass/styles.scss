@@ -61,7 +61,7 @@ h2 {
   color: var(--nutmeg);
 }
 
-p,ul,ol,strong,b, a {
+p,ul,ol,strong,b,a,td {
   font: {
     family: var(--ff-body);
     size: rem(16px);
@@ -72,14 +72,6 @@ p,ul,ol,strong,b, a {
 a {text-decoration: none;}
 
 ol, ul {list-style-position: outside;}
-
-#instructions li::marker {
-  color: var(--nutmeg);
-}
-
-#instructions li::marker {
-  font-weight: var(--fw-bold);
-}
 
 #nutrition b {color: var(--nutmeg);}
 
@@ -180,7 +172,7 @@ footer {
       margin-block-end: 0.75rem;
     }
 
-    li::marker {
+    ::marker {
       font-size: rem(12px);
       color: var(--nutmeg);
     }
@@ -199,9 +191,44 @@ hr {
 #instructions {
   padding-inline: 1.5rem;
 
-}
+  ol {
+    padding-inline-start: rem(24px);
 
+    li {
+      padding-inline-start: 1rem;
+      line-height: 1.4em;
+    }
+    
+    :not(:last-child) {
+      margin-block-end: 0.75rem;
+    }
+
+    ::marker {
+      color: var(--nutmeg);
+      font-weight: var(--fw-bold);
+    }
+
+  }
+
+}
 /* #endregion Instructions */
+
+/* #region Nutrition */
+#nutrition {
+  padding-inline: 1.5rem;
+
+  table,tr {
+    width: 100%;
+  }
+
+  tr {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+  }
+
+}
+/* #endregion Nutrition */
 
 /* #endregion Mobile Styling */
 

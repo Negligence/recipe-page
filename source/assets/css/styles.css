@@ -49,7 +49,7 @@ h2 {
   color: var(--nutmeg);
 }
 
-p, ul, ol, strong, b, a {
+p, ul, ol, strong, b, a, td {
   font-family: var(--ff-body);
   font-size: 1rem;
   color: var(--wenge-brown);
@@ -61,14 +61,6 @@ a {
 
 ol, ul {
   list-style-position: outside;
-}
-
-#instructions li::marker {
-  color: var(--nutmeg);
-}
-
-#instructions li::marker {
-  font-weight: var(--fw-bold);
 }
 
 #nutrition b {
@@ -151,7 +143,7 @@ footer > a {
 #ingredients ul :not(:last-child) {
   margin-block-end: 0.75rem;
 }
-#ingredients ul li::marker {
+#ingredients ul ::marker {
   font-size: 0.75rem;
   color: var(--nutmeg);
 }
@@ -167,8 +159,36 @@ hr {
 #instructions {
   padding-inline: 1.5rem;
 }
+#instructions ol {
+  padding-inline-start: 1.5rem;
+}
+#instructions ol li {
+  padding-inline-start: 1rem;
+  line-height: 1.4em;
+}
+#instructions ol :not(:last-child) {
+  margin-block-end: 0.75rem;
+}
+#instructions ol ::marker {
+  color: var(--nutmeg);
+  font-weight: var(--fw-bold);
+}
 
 /* #endregion Instructions */
+/* #region Nutrition */
+#nutrition {
+  padding-inline: 1.5rem;
+}
+#nutrition table, #nutrition tr {
+  width: 100%;
+}
+#nutrition tr {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+}
+
+/* #endregion Nutrition */
 /* #endregion Mobile Styling */
 /* #region Desktop Styling */
 @media only screen and (min-width: 48em) {
