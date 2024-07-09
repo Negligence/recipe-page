@@ -182,10 +182,14 @@ hr {
 #nutrition table, #nutrition tr {
   width: 100%;
 }
-#nutrition tr {
+#nutrition table {
   display: grid;
   grid-auto-flow: column;
-  justify-items: center;
+  justify-items: start;
+}
+#nutrition tr {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* #endregion Nutrition */

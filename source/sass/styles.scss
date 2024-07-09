@@ -221,10 +221,15 @@ hr {
     width: 100%;
   }
 
-  tr {
+  table {
     display: grid;
     grid-auto-flow: column;
-    justify-items: center;
+    justify-items: start;
+  }
+
+  tr {
+    display: flex;
+    justify-content: space-between;
   }
 
 }
