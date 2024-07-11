@@ -179,17 +179,23 @@ hr {
 #nutrition {
   padding-inline: 1.5rem;
 }
-#nutrition table, #nutrition tr {
-  width: 100%;
-}
-#nutrition table {
+#nutrition dl {
+  padding-inline-start: 1.5rem;
   display: grid;
-  grid-auto-flow: column;
-  justify-items: start;
+  grid-template-columns: repeat(2, 1fr);
 }
-#nutrition tr {
-  display: flex;
-  justify-content: space-between;
+#nutrition dt {
+  padding-inline-start: 1rem;
+}
+#nutrition dt, #nutrition dd {
+  display: inline-block;
+  padding-block: 1rem;
+}
+#nutrition hr {
+  display: contents;
+  width: 100%;
+  border-width: 1px 0 0;
+  border-color: hsla(0, 0%, 0%, 0.15);
 }
 
 /* #endregion Nutrition */

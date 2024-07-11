@@ -217,19 +217,26 @@ hr {
 #nutrition {
   padding-inline: 1.5rem;
 
-  table,tr {
-    width: 100%;
-  }
-
-  table {
+  dl {
+    padding-inline-start: rem(24px);
     display: grid;
-    grid-auto-flow: column;
-    justify-items: start;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  tr {
-    display: flex;
-    justify-content: space-between;
+  dt {
+    padding-inline-start: 1rem;
+  }
+
+  dt,dd {
+    display: inline-block;
+    padding-block: 1rem;
+  }
+  
+  hr {
+    display: contents;
+    width: 100%;
+    border-width: 1px 0 0;
+    border-color: hsla(0, 0%, 0%, 0.15);
   }
 
 }
