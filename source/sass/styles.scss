@@ -75,7 +75,9 @@ ol, ul {list-style-position: outside;}
 
 #nutrition b {color: var(--nutmeg);}
 
-footer { 
+footer {
+  margin-block-start: 2rem;
+  
   font: {
     family:var(--ff-body);
     size: rem(11px);
@@ -217,28 +219,31 @@ hr {
 #nutrition {
   padding-inline: 1.5rem;
 
-  dl {
-    padding-inline-start: rem(24px);
+  h2 {
+    line-height: 1em;
+    margin-block-end: 1.75rem;
+  }
+
+  ul {
+    padding-inline-start: 0;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+  }
+
+  li {
+    padding-inline-start: 2rem;
+    list-style-type: none;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 2.25fr;
+    line-height: 1em;
   }
 
-  dt {
-    padding-inline-start: 1rem;
-  }
-
-  dt,dd {
+  span,b {
     display: inline-block;
     padding-block: 1rem;
   }
   
-  hr {
-    display: contents;
-    width: 100%;
-    border-width: 1px 0 0;
-    border-color: hsla(0, 0%, 0%, 0.15);
-  }
-
 }
 /* #endregion Nutrition */
 

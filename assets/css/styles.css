@@ -68,6 +68,7 @@ ol, ul {
 }
 
 footer {
+  margin-block-start: 2rem;
   font-family: var(--ff-body);
   font-size: 0.6875rem;
   text-align: center;
@@ -179,23 +180,24 @@ hr {
 #nutrition {
   padding-inline: 1.5rem;
 }
-#nutrition dl {
-  padding-inline-start: 1.5rem;
+#nutrition h2 {
+  line-height: 1em;
+  margin-block-end: 1.75rem;
+}
+#nutrition ul {
+  padding-inline-start: 0;
+}
+#nutrition li {
+  padding-inline-start: 2rem;
+  list-style-type: none;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 2.25fr;
+  line-height: 1em;
 }
-#nutrition dt {
-  padding-inline-start: 1rem;
-}
-#nutrition dt, #nutrition dd {
+#nutrition span, #nutrition b {
   display: inline-block;
   padding-block: 1rem;
-}
-#nutrition hr {
-  display: contents;
-  width: 100%;
-  border-width: 1px 0 0;
-  border-color: hsla(0, 0%, 0%, 0.15);
 }
 
 /* #endregion Nutrition */
