@@ -249,6 +249,31 @@ hr {
 }
 /* #endregion Nutrition */
 
+@media only screen and (max-width: em(375px)) {
+  #hero {
+
+    div {
+      width: 100%;
+      padding-inline: rem(24px);
+      padding-block-start: rem(20px);
+
+      strong {
+        font-size: rem(20px);
+        color: var(--dark-raspberry);
+      }
+
+      ul {
+        padding-inline-start: rem(20px);
+      }
+      
+      li {
+        line-height: 1.4em;
+        padding-inline-start: rem(4px);
+      }
+    }
+
+  }
+}
 /* #endregion Mobile Styling */
 
 /* #region Desktop Styling */

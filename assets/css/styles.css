@@ -204,6 +204,24 @@ hr {
 }
 
 /* #endregion Nutrition */
+@media only screen and (max-width: 23.4375em) {
+  #hero div {
+    width: 100%;
+    padding-inline: 1.5rem;
+    padding-block-start: 1.25rem;
+  }
+  #hero div strong {
+    font-size: 1.25rem;
+    color: var(--dark-raspberry);
+  }
+  #hero div ul {
+    padding-inline-start: 1.25rem;
+  }
+  #hero div li {
+    line-height: 1.4em;
+    padding-inline-start: 0.25rem;
+  }
+}
 /* #endregion Mobile Styling */
 /* #region Desktop Styling */
 @media only screen and (min-width: 48em) {
