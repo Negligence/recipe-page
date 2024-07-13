@@ -140,15 +140,16 @@ footer {
     ul {
       padding-inline-start: rem(24px);
     }
-
+    
     li {
       line-height: 1.75em;
       padding-inline-start: rem(28px);
     }
-
+    
     li::marker {
       color: var(--dark-raspberry);
       font-size: rem(12px);
+      margin-block: auto;
     }
 
     b {
@@ -184,7 +185,7 @@ footer {
 
 hr {
   border-color: hsla(0, 0%, 0%, 0.15);
-  border-width: 1px 0 0;
+  border-width: rem(1px) 0 0;
   margin: 2rem 1.5rem;
 }
 /* #endregion Ingredients */
@@ -226,17 +227,18 @@ hr {
 
   ul {
     padding-inline-start: 0;
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-  }
 
-  li {
-    padding-inline-start: 2rem;
-    list-style-type: none;
-    border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
-    display: grid;
-    grid-template-columns: 2fr 2.25fr;
-    line-height: 1em;
+    li {
+      padding-inline-start: 2rem;
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 2fr 2.25fr;
+      line-height: 1em;
+    }
+    
+    :not(:last-of-type) {
+      border-bottom: rem(1px) solid hsla(0, 0%, 0%, 0.15);
+    }
   }
 
   span,b {

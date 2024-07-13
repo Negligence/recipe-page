@@ -124,6 +124,7 @@ footer > a {
 #hero div li::marker {
   color: var(--dark-raspberry);
   font-size: 0.75rem;
+  margin-block: auto;
 }
 #hero div b {
   font-weight: var(--fw-bold);
@@ -151,7 +152,7 @@ footer > a {
 
 hr {
   border-color: hsla(0, 0%, 0%, 0.15);
-  border-width: 1px 0 0;
+  border-width: 0.0625rem 0 0;
   margin: 2rem 1.5rem;
 }
 
@@ -187,13 +188,15 @@ hr {
 #nutrition ul {
   padding-inline-start: 0;
 }
-#nutrition li {
+#nutrition ul li {
   padding-inline-start: 2rem;
   list-style-type: none;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
   display: grid;
   grid-template-columns: 2fr 2.25fr;
   line-height: 1em;
+}
+#nutrition ul :not(:last-of-type) {
+  border-bottom: 0.0625rem solid hsla(0, 0%, 0%, 0.15);
 }
 #nutrition span, #nutrition b {
   display: inline-block;
