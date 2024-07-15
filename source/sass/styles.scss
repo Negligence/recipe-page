@@ -12,7 +12,6 @@ html {
 
   --nutmeg: hsl(14, 45%, 36%);
   --dark-raspberry: hsl(332, 51%, 32%);
-  --dark-raspberry-bg: hsl(322, 100%, 98%);
   --white: hsl(0, 0%, 100%);
   --rose-white: hsl(330, 100%, 98%);
   --eggshell: hsl(30, 54%, 90%);
@@ -40,15 +39,16 @@ body {
   display: inherit;
   height: inherit;
   font-family: var(--ff-body);
+  background-color: var(--eggshell);
   // line-height: 1em;
   
   // display: grid;
   // place-items: center;
   // gap: clamped(16px, 32px);
   
-  // main {
-  //   display: contents;
-  // }
+  main {
+    background-color: #fff;
+  }
 }
 
 h1 {
@@ -123,7 +123,7 @@ footer {
 
   div {
     grid-area: div;
-    background-color: var(--dark-raspberry-bg);
+    background-color: var(--rose-white);
     width: rem(310px);
     height: rem(190px);
     border-radius: rem(10px);
@@ -184,7 +184,7 @@ footer {
 }
 
 hr {
-  border-color: hsla(0, 0%, 0%, 0.15);
+  border-top-color: var(--rose-white) !important; //hsla(0, 0%, 0%, 0.15)
   border-width: rem(1px) 0 0;
   margin: 2rem 1.5rem;
 }
@@ -251,16 +251,12 @@ hr {
 
 @media only screen and (max-width: em(375px)) {
   #hero {
+    h1 {
+      font-size: rem(30px);
+    }
 
     div {
       width: 100%;
-      padding-inline: rem(24px);
-      padding-block-start: rem(20px);
-
-      strong {
-        font-size: rem(20px);
-        color: var(--dark-raspberry);
-      }
 
       ul {
         padding-inline-start: rem(20px);
@@ -268,7 +264,7 @@ hr {
       
       li {
         line-height: 1.4em;
-        padding-inline-start: rem(4px);
+        padding-inline-start: 0;
       }
     }
 
