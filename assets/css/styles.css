@@ -6,7 +6,6 @@ html {
   width: 100%;
   --nutmeg: hsl(14, 45%, 36%);
   --dark-raspberry: hsl(332, 51%, 32%);
-  --white: hsl(0, 0%, 100%);
   --rose-white: hsl(330, 100%, 98%);
   --eggshell: hsl(30, 54%, 90%);
   --light-grey: hsl(30, 18%, 87%);
@@ -33,13 +32,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  display: inherit;
+  width: inherit;
   height: inherit;
   font-family: var(--ff-body);
   background-color: var(--eggshell);
+  display: grid;
+  place-items: center;
 }
 body main {
-  background-color: #fff;
+  background-color: white;
+  max-width: 736px;
 }
 
 h1 {
@@ -154,7 +156,8 @@ footer > a {
 }
 
 hr {
-  border-top-color: var(--rose-white) !important;
+  border-top-color: var(--light-grey);
+  border-style: solid;
   border-width: 0.0625rem 0 0;
   margin: 2rem 1.5rem;
 }
@@ -199,7 +202,7 @@ hr {
   line-height: 1em;
 }
 #nutrition ul :not(:last-of-type) {
-  border-bottom: 0.0625rem solid hsla(0, 0%, 0%, 0.15);
+  border-bottom: 0.0625rem solid var(--light-grey);
 }
 #nutrition span, #nutrition b {
   display: inline-block;
