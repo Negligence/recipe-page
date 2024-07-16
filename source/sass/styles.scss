@@ -39,15 +39,19 @@ body {
   height: inherit;
   font-family: var(--ff-body);
   background-color: var(--eggshell);
-  
   display: grid;
-  place-items: center;
-  // gap: clamped(16px, 32px);
-  
-  main {
-    background-color: white;
-    max-width: 736px;
-  }
+  place-items: center;    
+}
+
+main {
+
+}
+
+article {
+  background-color: white;
+  max-width: 736px;
+  padding-block: rem(40px);
+  border-radius: rem(24px);
 }
 
 h1 {
@@ -75,13 +79,13 @@ ol, ul {list-style-position: outside;}
 #nutrition b {color: var(--nutmeg);}
 
 footer {
-  margin-block-start: 2rem;
-  
+  background-color: white;
+  width: 100%;
+  text-align: center; 
   font: {
     family:var(--ff-body);
     size: rem(11px);
   }
-  text-align: center; 
   
   > a {
     font-size: rem(11px);
@@ -276,6 +280,17 @@ hr {
 @media only screen and (min-width: em(768px)) {
   img {
     border-radius: rem(10px);
+  }
+
+  body {
+  }
+
+  main {
+    margin-block: rem(122px);
+  }
+
+  footer {
+    background-color: transparent;
   }
 }
 
