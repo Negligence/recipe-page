@@ -70,11 +70,7 @@ a {text-decoration: none;}
 
 ol, ul {list-style-position: outside;}
 
-#nutrition b {color: var(--nutmeg);}
-
 footer {
-  background-color: white;
-  width: 100%;
   text-align: center; 
   font: {
     family:var(--ff-body);
@@ -84,6 +80,11 @@ footer {
   > a {
     font-size: rem(11px);
     color: var(--dark-raspberry);
+  }
+  
+  > a:visited {
+    font-size: rem(11px);
+    color: var(--nutmeg);
   }
 }
 /* #endregion Defaults */
@@ -154,7 +155,7 @@ footer {
     }
   }
 }
-/* #enregion Hero */
+/* #endregion Hero */
 
 /* #region Ingredients */
 #ingredients {
@@ -239,6 +240,8 @@ hr {
     }
   }
 
+  b {color: var(--nutmeg);}
+
   span,b {
     display: inline-block;
     padding-block: 1rem;
@@ -272,7 +275,19 @@ hr {
 
 /* #region Desktop Styling */
 @media only screen and (min-width: em(768px)) {
-/* #region Hero */
+  main {
+    margin-block: rem(122px);
+  }
+
+  article {
+    padding-block: rem(40px);
+    border-radius: rem(24px);  
+  }
+
+  hr {
+    margin-inline: rem(40px);
+  }
+
   #hero {
     place-items: stretch;
     row-gap: 1.5rem;
@@ -287,11 +302,15 @@ hr {
     img {
       place-self: center;
       border-radius: rem(10px);
-      margin-block-end: 0.5rem;
+      margin-block-end: rem(10px);
     }
     
     h1 {
       font-size: (40px);
+    }
+
+    p {
+      margin-block-end: rem(10px);
     }
 
     div {
@@ -307,31 +326,19 @@ hr {
       }
     }
   }
-/* #enregion Hero */
 
-
-  body {
+  #ingredients,
+  #instructions,
+  #nutrition {
+    padding-inline: rem(40px);
   }
 
-  main {
-    margin-block: rem(122px);
+  #nutrition {
+    ul {
+      li {
+        grid-template-columns: 2fr 2.15fr;
+      }
+    }
   }
-
-  article {
-    padding-block: rem(40px);
-    border-radius: rem(24px);  
-  }
-
-  footer {
-    background-color: transparent;
-  }
-}
-
-@media only screen and (min-width: em(920px)) {
-
 }
 /* #endregion Desktop Styling */
-
-/* #region Active states */
-
-/* #endregion Active states */
