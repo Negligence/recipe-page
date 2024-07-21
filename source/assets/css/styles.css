@@ -35,7 +35,7 @@ body {
   width: inherit;
   height: inherit;
   font-family: var(--ff-body);
-  background-color: var(--eggshell);
+  background-color: white;
   display: grid;
   place-items: center;
 }
@@ -230,12 +230,16 @@ hr {
 }
 /* #endregion Mobile Styling */
 /* #region Desktop Styling */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 46.875em) {
+  body {
+    background-color: var(--eggshell);
+  }
   main {
     margin-block: 7.625rem;
   }
   article {
-    padding-block: 2.5rem;
+    padding-block-start: 2.5rem;
+    padding-block-end: 0.625rem;
     border-radius: 1.5rem;
   }
   hr {

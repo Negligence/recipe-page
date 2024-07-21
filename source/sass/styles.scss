@@ -38,7 +38,7 @@ body {
   width: inherit;
   height: inherit;
   font-family: var(--ff-body);
-  background-color: var(--eggshell);
+  background-color: white;
   display: grid;
   place-items: center;    
 }
@@ -274,13 +274,18 @@ hr {
 /* #endregion Mobile Styling */
 
 /* #region Desktop Styling */
-@media only screen and (min-width: em(768px)) {
+@media only screen and (min-width: em(750px)) {
+  body {
+    background-color: var(--eggshell);
+  }
+  
   main {
     margin-block: rem(122px);
   }
 
   article {
-    padding-block: rem(40px);
+    padding-block-start: rem(40px);
+    padding-block-end: rem(10px);
     border-radius: rem(24px);  
   }
 
