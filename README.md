@@ -1,89 +1,178 @@
-# Frontend Mentor - Recipe page
+# Frontend Mentor - Stats preview card component solution
 
-![Design preview for the Recipe page coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+The root directory here displays the final compiled output, to use the source files for its SASS functions, use the ```source``` folder as your root directory and requires the setup below.
 
-Thanks for checking out this front-end coding challenge.
+## Setup
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+Using this solution with SASS requires that you install [Nodejs](https://nodejs.org/en/) to run node packet manager in the command line, if you don't have it yet download from the link above and install it. ![Nodejs](./source/screenshots/nodejs.jpg)
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+After that, you can now initialize the project using the command line or the build-in VScode command line using ```ctrl + ` ``` then running the ```npm install``` command. ![npm install](./source/screenshots/npminstall.jpg)
 
-## The challenge
+Then run the ```npm start``` command to start development. ![npm start](./source/screenshots/npmstart.jpg) 
 
-Your challenge is to build out this recipe page and get it looking as close to the design as possible.
+If you are finished with the project, you can also use the ```npm run postbuild``` script to have your css be run through autoprefixer for browser compatibility and minify it at the same time. ![npm run postbuild](./source/screenshots/npmrunpostbuild.jpg)
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## Table of contents
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Where to find everything
+## Overview
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### The Challenge
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+Users should be able to:
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+The designs were created to the following widths:
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+- Mobile: 375px
+- Desktop: 1440px
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Screenshot
 
-## Building your project
+| ![Mobile](./source/screenshots/mobile.png) | ![Desktop](./source/screenshots/desktop.png) |
+| ------- | ------- |
+| Mobile  | Desktop |
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Links
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- Solution URL: [Github Repo](https://negligence.github.io/recipe-page/)
+- Live Site URL: [Github Pages](https://github.com/Negligence/recipe-page)
 
-## Deploying your project
+## My process
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+### Built with
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- SASS
+- [Nodejs](https://nodejs.org/en/)
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS Grid
+- Mobile-first workflow
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### What I learned
 
-## Create a custom `README.md`
+I used SASS to create a functions.scss file to streamline repetitive tasks like converting Pixel values to Rems and Ems, Computing clamp values for responsive resizing, as well as creating a mixin to simplify making media queries.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+I then called that functions.scss here in my styles.scss to use them. Although the clamped function wasn't very used here, this will become a very usefull tool for me moving forward in other projects. Learning to use SASS nesting and interpolation was very fun.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Continued development
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+These functions will be very helpful moving forward with future projects.
 
-## Submitting your solution
+```clamped()```
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+Takes 2 arguments -- Minimum Pixel Value, Maximum Pixel Value and will compute the middle value aswell as converting them to Rem values.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+```css
+p {
+  font-size: clamped(16px, 19px);
+}
+```
 
-## Sharing your solution
+```css
+p {
+  font-size: clamp(1rem, 0.5vw + 0.88rem, 1.19rem);
+}
+```
 
-There are multiple places you can share your solution:
+```rem()```
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+Takes the pixel value and divides it by 16 (which is the default browser font size) then returns it in Rems.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+```css
+strong {
+      font-size: rem(24px);
+    }
+```
+```css
+section > .stats strong {
+  font-size: 1.5rem;
+}
+```
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+```em()```
 
-## Got feedback for us?
+Takes the pixel value and divides it by 16 (which is the default browser font size) then returns it in Ems. If its parent container has a different font size, it can take in another value to replace the default 16 that you divide by.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+```css
+h1 {
+  line-height: em(44px, 36px);
+}
+```
+```css
+h1 {
+  line-height: 1.2222222222em;
+}
+```
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+Mixins that use ```@include```
 
-**Have fun building!** 🚀
+The following mixins create media queries for mobile first and desktop first approaches.
+They take in a pixel values as an argument then converts it to em values.
+
+```mobile-media-query()```
+
+```css
+@include mobile-media-query(1150px) {
+
+}
+```
+```css
+@media only screen and (min-width: 71.875em) {
+
+}
+```
+
+```desktop-media-query()```
+
+```css
+@include desktop-media-query(1150px) {
+
+}
+```
+```css
+@media only screen and (max-width: 71.875em) {
+
+}
+```
+
+### Useful resources
+
+- [Fluid Type Scale Calculator](https://utopia.fyi/type/calculator), [Neko Calc Px to Rem Converter](https://nekocalc.com/px-to-rem-converter), and [Neko Calc Px to Em Converter](https://nekocalc.com/px-to-em-converter) - These are the originals that I drew inspiration from and used before when I didn't know how to use SASS.
+- [Creating a Fluid Type Scale with CSS Clamp](https://www.aleksandrhovhannisyan.com/blog/fluid-type-scale-with-css-clamp/) - An article that explains how the fluid type scale calculator computes the preferred size for clamps. This is also the source that I used to create my modified _functions.scss
+- [Stop using an extension to compile Sass](https://www.youtube.com/watch?v=o4cECvhrBo8) - Video that taught me how to get a simple SASS setup up and running and is the base for my modified package.json setup file.
+- [Stop using @import with Sass | @use and @forward explained](https://www.youtube.com/watch?v=CR-a8upNjJ0) - Gave me a glimpse of how to connect SASS files to each other.
+- [Write less code with these Sass mixins](https://www.youtube.com/watch?v=7ruDsUN4-iA) - My Main inspiration to create my on Mixins.
+- [3 custom property tricks to improve your CSS](https://www.youtube.com/watch?v=pKWSXyilG9k) and [The one big problem with custom properties (and how to get around it)](https://www.youtube.com/watch?v=CVCHrxzNNDc) - These are the two videos that convinced me to opt for CSS custom properties over SASS variables, and in turn forced me to learn about SASS interpolation.
+- [5 Sass features that make it better than vanilla CSS](https://www.youtube.com/watch?v=g1kF45K-q7o) - Gave me a brief overview of what I can do with SASS and made me try to incorporate as much functionality as I can to simplify future works.
+
+- [Sass with auto-refresh (and more) made easy](https://www.youtube.com/watch?v=wYWf2m_yzBQ), [Sass, BEM, & Responsive Design (4 hr beginners course)](https://www.youtube.com/watch?v=jfMHA8SqUL4), [Sass @import is being replaced with @use and @forward](https://www.youtube.com/watch?v=dOnYNEXv9BM), [Generate custom props & utility classes with Sass?!](https://www.youtube.com/watch?v=gP8yFWCTr7Q) - More SASS Videos I binge-watched to further understand the fuck that I was doing.
+
+## Author
+
+- Frontend Mentor - [@Negligence](https://www.frontendmentor.io/profile/Negligence)
+- Github - [Negligence](https://github.com/Negligence)
+- Twitter - [@IEImNothing](https://twitter.com/IEImNothing)
+- Twitch - [Arrogant_Negligence](https://www.twitch.tv/arrogant_negligence)
+- Youtube - [Jan Panado](https://www.youtube.com/channel/UC4ojhHYmkHptu2JpyKtrL-w)
+- LinkedIn - [Jan Panado](https://www.linkedin.com/in/janp-09/)
+- Facebook - [Jan Panado](https://www.facebook.com/jan.panado)
+- Website - [Jan Panado](https://janpanado.com/)
+
+## Acknowledgments
+
+Shout out to [Kevin Powell](https://www.youtube.com/kepowob) and [Coder Coder](https://www.youtube.com/c/TheCoderCoder), their videos have been a Huge **HUGE** help. I really don't know what I would've done without their resources helping me out.
